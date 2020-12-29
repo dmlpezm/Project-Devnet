@@ -6,8 +6,7 @@ headers = {
     'Content-type': 'application/json',
     'Accept': 'application/json'
 }
-respuesta = requests.post(url, auth=(
-    'devnetuser', 'Cisco123!'), headers=headers)
+respuesta = requests.post(url, auth=('devnetuser', 'Cisco123!'), headers=headers)
 token = respuesta.text
 token = json.loads(token)
 token = token['Token']
